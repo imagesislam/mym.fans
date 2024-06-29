@@ -1,10 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const closeBtn = document.querySelector('.close');
-    const galleryItems = document.querySelectorAll('.gallery-item');
 
-    galleryItems.forEach(item => {
+    document.querySelectorAll('.gallery-item').forEach(item => {
         item.addEventListener('click', () => {
             lightbox.style.display = 'block';
             lightboxImg.src = item.src;
