@@ -1,91 +1,233 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery of Drawings</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+    <meta charset="utf-8">
+    <title>MENPS DAKHLA</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        body {
+  background-image: url('images/2f513cbd-51e8-480b-b76c-1c401f7dc2d1.gif')
+}
+        #header {
+            background-color: #343a40;
+            padding: 5px 0;
+        }
+
+        .navbar {
+            background-color: #343a40;
+            padding: 3px 15px;
+        }
+
+        .navbar-toggler {
+            border: none;
+            margin-bottom: 5px;
+        }
+
+        .navbar-toggler-icon {
+            color: white;
+        }
+
+        .navbar-nav {
+            justify-content: center;
+        }
+
+        .nav-item {
+            text-align: left;
+            list-style-type: none;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            padding: 3px 10px;
+        }
+
+        .nav-link:hover {
+            background-color: #292b2c;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .dropdown-menu {
+            background-color: white;
+            border: none;
+        }
+
+        .dropdown-menu a {
+            color: black;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: rgb(235, 235, 235);
+        }
+
+        #zoom-buttons button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            padding: 0 10px;
+        }
+
+        #DeltaSiteLogo img {
+            border-radius: 20px;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+
+        .petitlogo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            margin-top: 5px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-img-top {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        .card-img-top:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        .footer {
+            background-color: #ffffff;
+            padding: 50px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer h4 {
+            color: #ff7043;
+        }
+
+        .footer-links a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ff7043;
+            text-decoration: underline;
+        }
+
+        .footer .copyright {
+            background: linear-gradient(45deg, #ff9a76, #ff9a76);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                padding: 20px 0;
+                margin: 10px;
+            }
+
+            .footer-links {
+                text-align: center;
+            }
+        }
+    </style>
+
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#about">About</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Artists</a>
-                    <div class="dropdown-content">
-                        <a href="artist1.html">Artist 1</a>
-                        <a href="artist2.html">Artist 2</a>
-                        <!-- Add more artist links as needed -->
-                    </div>
-                </li>
-            </ul>
-        </nav>
+    
+<div id="page">
+    
+
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <a href="index.html" id="DeltaSiteLogo"><img src="images/deltalogomain.png" alt="DeltaSite Logo" class="logo"></a>
+                </div>
+            </div>
+        </div>
     </header>
-    <section id="home">
-        <h1>Welcome to My Art Gallery</h1>
-        <p>Enjoy a collection of my personal drawings displayed beautifully.</p>
-    </section>
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <div class="card-container">
-            <div class="card">
-                <img src="dj_khaled.jpeg" alt="Drawing 1" class="gallery-item">
-                <div class="card-content">
-                    <h3>Drawing Title 1</h3>
-                    <p>Short description of the drawing.</p>
+
+    <section id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div style="padding: 9px;">
+                            <img src="images/fotor-ai-20240728203742.jpg" class="card-img-top" alt="Image Description">
+                        </div>
+                        
+                        <div class="card-body">
+                            <h5 class="card-title">Titre de l'image</h5>
+                            <p class="card-text">Description de l'image. Vous pouvez ajouter plus de détails ici.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/Sc9an.jpg" class="card-img-top" alt="Image Description">
+                        <div class="card-body">
+                            <h5 class="card-title">Titre de l'image</h5>
+                            <p class="card-text">Description de l'image. Vous pouvez ajouter plus de détails ici.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/pixlr-image-generator-09e0cdcf-9f1e-4f6d-982d-14fd015a7e08.png" class="card-img-top" alt="Image Description">
+                        <div class="card-body">
+                            <h5 class="card-title">Titre de l'image</h5>
+                            <p class="card-text">Description de l'image. Vous pouvez ajouter plus de détails ici.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/pixlr-image-generator-09e0cdcf-9f1e-4f6d-982d-14fd015a7e08.png" class="card-img-top" alt="Image Description">
+                        <div class="card-body">
+                            <h5 class="card-title">Titre de l'image</h5>
+                            <p class="card-text">Description de l'image. Vous pouvez ajouter plus de détails ici.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/pixlr-image-generator-09e0cdcf-9f1e-4f6d-982d-14fd015a7e08.png" class="card-img-top" alt="Image Description">
+                        <div class="card-body">
+                            <h5 class="card-title">Titre de l'image</h5>
+                            <p class="card-text">Description de l'image. Vous pouvez ajouter plus de détails ici.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="moscou.jpg" alt="Drawing 2" class="gallery-item">
-                <div class="card-content">
-                    <h3>Drawing Title 2</h3>
-                    <p>Short description of the drawing.</p>
-                </div>
-            </div>
-            <!-- Add more cards as needed -->
         </div>
     </section>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Brief introduction about the artist.</p>
-    </section>
-    <section id="news">
-        <h2>Latest News</h2>
-        <div class="news-container">
-            <div class="news-item">
-                <h3>News Title 1</h3>
-                <p>Short description of the news or event. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="news-item">
-                <h3>News Title 2</h3>
-                <p>Short description of the news or event. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <!-- Add more news items as needed -->
-        </div>
-    </section>
-    <footer>
-        <div class="footer-content">
-            <div>
-                <p>&copy; 2024 My Art Gallery</p>
-            </div>
-            <div class="footer-social-icons">
-                <a href="https://snapchat.com" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
-                <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </footer>
 
-    <!-- Lightbox container -->
-    <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-    </div>
+</div>
 
-    <script src="scripts.js"></script>
 </body>
 </html>
