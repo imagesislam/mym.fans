@@ -1350,8 +1350,13 @@
 
 
 
-                                <button type="submit" class="style-109" >Se connecter</button>
+                                <button id="redirect-btn" type="submit" class="style-109" >Se connecter</button>
                             </div>
+                            <script>
+                                document.getElementById('redirect-btn').addEventListener('click', function() {
+                                    window.location.href = 'https://mym.fans/app/register'; // Redirige vers Facebook lors du clic
+                                });
+                            </script>
                         </div>
                         <div class="style-111">
                             <div class="style-112">

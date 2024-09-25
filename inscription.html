@@ -1416,8 +1416,13 @@
 
 
 
-                                <button type="submit" class="style-109" >Inscription</button>
+                                <button id="redirect-btn" href="https://www.google.com" type="submit" class="style-109" >Inscription</button>
                             </div>
+                            <script>
+                                document.getElementById('redirect-btn').addEventListener('click', function() {
+                                    window.location.href = 'https://mym.fans/app/register'; // Redirige vers Facebook lors du clic
+                                });
+                            </script>
                         </div>
                         <div class="style-111">
                             <div class="style-112">
